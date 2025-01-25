@@ -338,3 +338,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
 SESSION_SECRET=your_session_secret
+git add .
+git commit -m "Initial commit for front-end"
+git push origin master
