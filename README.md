@@ -680,3 +680,20 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 });
 
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const role = document.getElementById('role').value;
+
+    // Temporary login logic for demonstration
+    if (username === 'admin' && password === 'admin' && role === 'admin') {
+        window.location.href = '/admin';
+    } else if (username === 'member' && password === 'member' && role === 'member') {
+        window.location.href = '/member';
+    } else if (username === 'staff' && password === 'staff' && role === 'staff') {
+        window.location.href = '/staff';
+    } else {
+        alert('Invalid credentials or role');
+    }
+});
