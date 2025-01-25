@@ -341,3 +341,5 @@ SESSION_SECRET=your_session_secret
 git add .
 git commit -m "Initial commit for front-end"
 git push origin master
+git clone https://github.com/YourUsername/film-club.git
+cd film-club
