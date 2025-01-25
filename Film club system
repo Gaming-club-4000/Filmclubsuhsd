@@ -343,3 +343,72 @@ git commit -m "Initial commit for front-end"
 git push origin master
 git clone https://github.com/YourUsername/film-club.git
 cd film-club
+Filmclubsuhsd/
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+├── index.html
+├── admin.html
+├── member.html
+├── staff.html
+├── profile.html
+├── manage-kids.html
+├── README.md
+└── .gitignore
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High School Film Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the High School Film Club</h1>
+        <p>Access the live site at: <a href="https://Gaming-club-4000.github.io/Filmclubsuhsd/" target="_blank">https://Gaming-club-4000.github.io/Filmclubsuhsd/</a></p>
+    </header>
+    <main>
+        <section>
+            <h2>Login</h2>
+            <a href="auth/github">Login with GitHub</a>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const role = document.getElementById('role').value;
+
+    // Temporary login logic for demonstration
+    if (username === 'admin' && password === 'admin' && role === 'admin') {
+        window.location.href = '/admin';
+    } else if (username === 'member' && password === 'member' && role === 'member') {
+        window.location.href = '/member';
+    } else if (username === 'staff' && password === 'staff' && role === 'staff') {
+        window.location.href = '/staff';
+    } else {
+        alert('Invalid credentials or role');
+    }
+});
